@@ -11,6 +11,8 @@ services:
             MYSQL_DATABASE: wordpress
             MYSQL_USER: wordpress
             MYSQL_PASSWORD: wordpress
+        networks:
+            - shared-proxy
 
     wordpress:
         depends_on:
