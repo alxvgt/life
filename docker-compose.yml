@@ -28,6 +28,7 @@ services:
             labels:
                 - "traefik.enable=true"
                 - "traefik.http.routers.teapot.rule=Host(`teapot.418.ovh`)"
+                - "traefik.docker.network=shared-proxy"
                 - "traefik.http.routers.teapot.tls=true"
                 - "traefik.http.routers.teapot.tls.certresolver=mytlschallenge"
                 - "traefik.http.services.teapot.loadbalancer.server.port=80"
